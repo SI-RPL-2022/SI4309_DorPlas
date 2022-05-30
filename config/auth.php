@@ -40,6 +40,16 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'donator' => [
+            'driver' => 'session',
+            'provider' => 'donators',
+        ],
+
+        'employee' => [
+            'driver' => 'session',
+            'provider' => 'employees',
+        ],
     ],
 
     /*
@@ -63,6 +73,18 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+
+        'donators' => [
+            'driver' => 'AuthValidateDonatorsServiceProvider',
+            'model' => App\Models\Donators::class,
+            'table' => 'donators'
+        ],
+
+        'employees' => [
+            'driver' => 'AuthValidateEmployeesServiceProvider',
+            'model' => App\Models\Employees::class,
+            'table' => 'employees'
         ],
 
         // 'users' => [

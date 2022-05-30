@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Auth;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -24,6 +25,11 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        Auth::provider('AuthValidateDonatorsServiceProvider', function ($app, array $config) {
+            return new AuthValidateDonatorsServiceProvider($app['hash'], $config['model']);
+        });
+        Auth::provider('AuthValidateEmployeesServiceProvider', function ($app, array $config) {
+            return new AuthValidateEmployeesServiceProvider($app['hash'], $config['model']);
+        });
     }
 }
