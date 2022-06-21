@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 
 use App\Models\BloodBank;
 use App\Models\DonorNotes;
-use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
@@ -65,11 +64,12 @@ class DashboardController extends Controller
 
     public function getCovid()
     {
-        $client = new Client;
-        $results = $client->request('GET', 'https://apicovid19indonesia-v2.vercel.app/api/indonesia/harian');
-
-        $array = json_decode($results->getBody()->getContents(), true);
-        $collection = collect($array);
-        return $collection;
+//        $client = new Client;
+//        $results = $client->request('GET', 'https://apicovid19indonesia-v2.vercel.app/api/indonesia/harian');
+//
+//        $array = json_decode($results->getBody()->getContents(), true);
+//        $collection = collect($array);
+//        return $collection;
+        return [];
     }
 }

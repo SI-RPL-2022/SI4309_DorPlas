@@ -21,7 +21,7 @@
                 <a href="{{ url('/account') }}" class="text-decoration-none">
                     <div class="row">
                         <div class="col-md-3">
-                            <img src="{{ auth()->user()->profile_images_donators ?? url('/images/avatar.jpg') }}"
+                            <img src="{{ auth()->user()->profile_images_donators ?? url('/images/doctor_avatar.jpg') }}"
                                  class="rounded-circle" width="70px"
                                  height="70px" alt="avatar">
                         </div>
