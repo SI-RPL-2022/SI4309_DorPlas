@@ -33,4 +33,23 @@ class LoginTest extends DuskTestCase
                 ->assertPathIs('/dashboard');
         });
     }
+
+    /** @test */
+    public function user_failed_to_login()
+    {
+        $user = collect([
+            'email_donators' => 'muhammad.rezki.ananda@gmail.com',
+            'password_donators' => '123454321'
+        ]);
+
+        $this->browse(function (Browser $browser) use ($user) {
+            $browser->visit('/login')
+                ->assertSee('Masuk')
+                ->type('email_donators', $user['email_donators'])
+                ->type('password_donators', $user['password_donators'])
+                ->press('Masuk')
+                ->assertPathIs('/login')
+                ->assertSee('Email atau password tidak cocok');
+        });
+    }
 }
