@@ -19,10 +19,16 @@ class LoginTest extends DuskTestCase
     /** @test */
     public function user_can_login_and_redirect_to_dashboard()
     {
-        $this->browse(function (Browser $browser) {
+        $user = collect([
+            'email_donators' => 'muhammad.rezki.ananda@gmail.com',
+            'password_donators' => '12345'
+        ]);
+
+        $this->browse(function (Browser $browser) use ($user) {
             $browser->visit('/login')
-                ->type('email_donators', 'muhammad.rezki.ananda@gmail.com')
-                ->type('password_donators', '12345')
+                ->assertSee('Masuk')
+                ->type('email_donators', $user['email_donators'])
+                ->type('password_donators', $user['password_donators'])
                 ->press('Masuk')
                 ->assertPathIs('/dashboard');
         });
