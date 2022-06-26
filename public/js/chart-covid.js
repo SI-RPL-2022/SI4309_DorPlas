@@ -7,7 +7,7 @@ const dataPositive = [];
 
 for (let i = 0; i < dataCovid.length; i++) {
     const d = new Date(dataCovid[i]['tanggal']);
-    labelsData.push(d.getDate() + "/" + d.getMonth() + 1 + "/" + d.getFullYear());
+    labelsData.push(String(d.getDate()).padStart(2, '0') + "/" + String(d.getMonth() + 1).padStart(2, '0') + "/" + d.getFullYear());
     dataPositive.push(dataCovid[i]['positif']);
 }
 
