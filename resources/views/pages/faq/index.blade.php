@@ -115,11 +115,11 @@
                         <div class="card-body text-decoration-none">
                             <span><i class="fas fa-quote-right text-red"></i></span>
                             <p class="text-title1 text-grey">
-                                - Alif Yanuar Aditya Subagyo <br>
-                                - Bagus Tri Atmaja <br>
-                                - Muhammad Ihsan Izzulhaq <br>
+                                - Farhan Bani Ahnaf <br>
+                                - Muhammad Syamaidzar Al Ghifari <br>
+                                - Muhammad Rizq Dzaki Asyam <br>
                                 - Muhammad Rezki Ananda <br>
-                                - Yanuar Taruna Lutfi <br>
+                                - Ibnu Zulkarnain <br>
                             </p>
 
                         </div>
