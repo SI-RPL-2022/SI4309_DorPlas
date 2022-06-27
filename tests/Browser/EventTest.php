@@ -20,9 +20,9 @@ class EventTest extends DuskTestCase
                 ->assertSee('Masuk')
                 ->type('email_donators', $user['email_donators'])
                 ->type('password_donators', $user['password_donators'])
-                ->press('Masuk')
-                ->assertPathIs('/dashboard')
-                ->visit('/donor')
+                ->press('Masuk');
+
+            $browser->visit('/donor')
                 ->assertSee('Form Pengajuan Donor')
                 ->select('id_institutions', 'PMI Surabaya')
                 ->script([

@@ -20,8 +20,9 @@ class LocationTest extends DuskTestCase
                 ->assertSee('Masuk')
                 ->type('email_donators', $user['email_donators'])
                 ->type('password_donators', $user['password_donators'])
-                ->press('Masuk')
-                ->visit("/location")
+                ->press('Masuk');
+
+            $browser->visit("/location")
                 ->assertSee('PMI');
         });
     }
@@ -39,8 +40,9 @@ class LocationTest extends DuskTestCase
                 ->assertSee('Masuk')
                 ->type('email_donators', $user['email_donators'])
                 ->type('password_donators', $user['password_donators'])
-                ->press('Masuk')
-                ->visit("/location")
+                ->press('Masuk');
+
+            $browser->visit("/location")
                 ->ClickLink('PMI Surabaya')
                 ->assertSee('PMI Surabaya')
                 ->press('Donor Disini')

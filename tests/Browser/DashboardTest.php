@@ -20,9 +20,9 @@ class DashboardTest extends DuskTestCase
                 ->assertSee('Masuk')
                 ->type('email_donators', $user['email_donators'])
                 ->type('password_donators', $user['password_donators'])
-                ->press('Masuk')
-                ->assertPathIs('/dashboard')
-                ->assertSee('Trend Covid Indonesia')
+                ->press('Masuk');
+
+            $browser->assertSee('Trend Covid Indonesia')
                 ->assertSee('Artikel Pilihan')
                 ->assertSee('Jadwal Donor Terdekat');
         });
