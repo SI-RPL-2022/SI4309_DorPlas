@@ -43,5 +43,18 @@ class DonatorsSeeder extends Seeder
             'address_donators' => 'Jl. Jombang Raya No.38A, Pondok Kacang Timur, Pondok Aren, Tangerang Selatan',
             'point_donators' => mt_rand(0, 100)
         ]);
+
+        Donators::create([
+            'id_donators' => Uuid::uuid4()->toString() . "\n",
+            'name_donators' => 'Muhammad Syamaidzar Al Ghifari',
+            'email_donators' => 'syamaidzaaar@gmail.com',
+            'password_donators' => Hash::make(12345),
+            'gender_donators' => 'male',
+            'blood_type_donators' => 'B',
+            'rhesus_type_donators' => 'positive',
+            'contact_donators' => '081284087732',
+            'address_donators' => 'Jl.Malaka Raya, Jakarta Timur',
+            'point_donators' => mt_rand(0, 100)
+        ]);
     }
 }
