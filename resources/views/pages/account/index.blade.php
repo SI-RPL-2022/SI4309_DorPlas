@@ -200,7 +200,7 @@
                             Positif (+)
                         </option>
                         <option
-                            value="negatif" {{ (auth()->user()->rhesus_type_donators === "negative") ? 'selected' : '' }}>
+                            value="negative" {{ (auth()->user()->rhesus_type_donators === "negative") ? 'selected' : '' }}>
                             Negatif (-)
                         </option>
                     </select>
