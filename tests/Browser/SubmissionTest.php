@@ -23,7 +23,7 @@ class SubmissionTest extends DuskTestCase
                 ->press('Masuk');
 
             $browser->visit("/submission")
-                ->assertSee('Carilah Event Donor Di Sekitar Anda');
+                ->assertSee('Ajukan Donor');
         });
     }
 
